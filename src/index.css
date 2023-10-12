@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Space+Mono:ital,wght@0,700;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .font-h1 {
+    @apply font-['Space_Mono'] text-[3.5rem] leading-[3.5rem] tracking-[-2.5px];
+  }
+
+  .font-h2 {
+    @apply font-['Space_Mono'] text-5xl leading-[3rem] tracking-[-2.14px];
+  }
+
+  .font-h3 {
+    @apply font-['Space_Mono'] text-[2.5rem] leading-[3rem] tracking-[-1.79px];
+  }
+
+  .font-h4 {
+    @apply font-['Space_Mono'] text-2xl leading-[1.75rem] tracking-[-1.07px];
+  }
+
+  .font-h5 {
+    @apply font-['Space_Mono'] text-[1.25rem] leading-[1.75rem] tracking-[-0.89px];
+  }
+
+  .font-body {
+    @apply font-['Lexend_Deca'] text-[0.938rem] leading-[1.563rem];
+  }
+
+  .font-mobile-nav {
+    @apply font-['Space_Mono'] text-lg leading-[1.563rem] tracking-normal text-light-grey;
+  }
+
+  .font-nav {
+    @apply font-['Space_Mono'] text-[0.938rem] leading-[1.563rem] tracking-normal text-dim-grey hover:text-yellow;
+  }
+
+  .btn {
+    @apply font-body flex h-[3.313rem] w-[11.25rem] items-center justify-center border-none bg-yellow font-['Space_Mono'] text-white transition-colors duration-300;
+  }
+  .btn:hover,
+  .btn:active {
+    @apply border-[3px] border-solid border-yellow bg-transparent text-yellow;
+  }
+
+  #home header {
+    background: url('./assets/images/home-hero-mobile.jpg') no-repeat center
+      center;
+    background-size: cover;
+  }
+
+  #about header {
+    background: url('./assets/images/about-hero-mobile.jpg') no-repeat center
+      center;
+    background-size: cover;
+  }
+
+  #careers header {
+    background: url('./assets/images/careers-location-hero-mobile.jpg')
+      no-repeat center center;
+    background-size: cover;
+  }
+
+  #locations header {
+    background: url('./assets/images/careers-location-hero-mobile.jpg')
+      no-repeat center center;
+    background-size: cover;
+  }
+
+  #CTA {
+    background-image: url('./assets/patterns/semi-circles.svg');
+    background-repeat: no-repeat;
+    background-position: -37.938rem bottom;
+    background-size: 72.063rem 10rem;
+  }
+
+  @media (min-width: 768px) {
+    #home header {
+      background: url('./assets/images/home-hero-tablet.jpg') no-repeat center
+        center;
+      background-size: cover;
+    }
+
+    #about header {
+      background: url('./assets/images/about-hero-tablet.jpg') no-repeat center
+        center;
+      background-size: cover;
+    }
+
+    #careers header {
+      background: url('./assets/images/careers-locations-hero-tablet.jpg')
+        no-repeat center center;
+      background-size: cover;
+    }
+
+    #locations header {
+      background: url('./assets/images/careers-locations-hero-tablet.jpg')
+        no-repeat center center;
+      background-size: cover;
+    }
+
+    #CTA {
+      background-position: -13.875rem bottom;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    #home header {
+      background: url('./assets/images/home-hero-desktop.jpg') no-repeat center
+        center;
+      background-size: cover;
+    }
+
+    #about header {
+      background: url('./assets/images/about-hero-desktop.jpg') no-repeat center
+        center;
+      background-size: cover;
+    }
+
+    #careers header {
+      background: url('./assets/images/careers-locations-hero-desktop.jpg')
+        no-repeat center center;
+      background-size: cover;
+    }
+
+    #locations header {
+      background: url('./assets/images/careers-locations-hero-desktop.jpg')
+        no-repeat center center;
+      background-size: cover;
+    }
+
+    #CTA {
+      background-position: 28.125rem bottom;
+    }
+  }
+}
+
+@layer utilities {
+  .answer {
+    @apply font-body max-h-0 overflow-hidden text-dark-navy opacity-0 transition-[max-height,_padding,_opacity] duration-[0.3s,_0.3s,_0.3s] ease-out;
+  }
+
+  .answer.show {
+    @apply h-auto max-h-[9999px] pt-6 opacity-100 transition-[max-height,_padding,_opacity] duration-[2s,_0.3s,_0.3s] ease-in;
+  }
+
+  .inactive-button {
+    @apply pointer-events-none scale-0 opacity-0;
+  }
+
+  .inactive-nav {
+    @apply pointer-events-none opacity-0;
+  }
+}
